@@ -1,3 +1,4 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,102 +7,126 @@
 
 /* Body and container styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
     color: #333;
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
 }
 
-/* Header styling */
+/* Header Styling */
 header {
     background-color: #343a40;
     color: white;
-    padding: 20px 0;
+    text-align: center;
+    padding: 30px 0;
 }
 
 header h1 {
-    margin-left: 20px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-header nav {
-    float: right;
-    margin-right: 20px;
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-header nav ul {
+/* Main Content Wrapper */
+.content-wrapper {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    position: sticky;
+    top: 0;
+    width: 250px;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+}
+
+#sidebar ul {
     list-style: none;
 }
 
-header nav ul li {
-    display: inline;
-    margin-left: 15px;
+#sidebar ul li {
+    margin: 20px 0;
 }
 
-header nav ul li a {
+#sidebar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-header nav ul li a:hover {
+#sidebar ul li a:hover {
     text-decoration: underline;
 }
 
-/* Sections styling */
+/* Main Content Styling */
+#main-content {
+    flex-grow: 1;
+    padding-left: 30px;
+}
+
 section {
-    padding: 40px 0;
+    margin-bottom: 40px;
 }
 
 section h2 {
-    font-size: 1.8em;
-    color: #343a40;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 section p {
     font-size: 1.1em;
-    margin-bottom: 20px;
 }
 
-/* Search bar */
+/* Search Box Styling */
 #search input {
-    width: 100%;
     padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    width: 100%;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Footer styling */
+#search-results {
+    margin-top: 20px;
+}
+
+/* Footer Styling */
 footer {
     background-color: #343a40;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #main-content {
+        padding-left: 0;
+    }
+
     header h1 {
-        font-size: 1.5em;
-    }
-
-    header nav ul li {
-        display: block;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    section {
-        padding: 20px 0;
+        font-size: 2em;
     }
 }
