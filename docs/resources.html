@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .resource {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Resource Loader</h1>
+<div class="search-container">
+    <label for="searchTitle">Title:</label>
+    <input type="text" id="searchTitle" />
+
+    <label for="searchDate">Date:</label>
+    <input type="date" id="searchDate" />
+
+    <label for="searchAuthor">Author:</label>
+    <input type="text" id="searchAuthor" />
+
+    <label for="searchCategory">Category:</label>
+    <input type="text" id="searchCategory" />
+
+    <button onclick="searchResources()">Search</button>
+</div>
+
+<div id="resourceContainer"></div>
+
+<script>
+async function loadResources() {
+    try {
+        const response = await fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/resources');
+        const files = await response.json();
+        const resources = await Promise.all(
+            files.map(async file => {
+                const fileResponse = await fetch(file.download_url);
+                return await fileResponse.json();
+            })
+        );
+        return resources;
+    } catch (error) {
+        console.error('Error loading resources:', error);
+        return [];
+    }
+}
+
+function displayResources(resources) {
+    const container = document.getElementById('resourceContainer');
+    container.innerHTML = '';
+    resources.forEach(resource => {
+        const div = document.createElement('div');
+        div.className = 'resource';
+        div.innerHTML = `<h2>${resource.Title}</h2>
+            <p><strong>Date:</strong> ${resource.Date}</p>
+            <p><strong>Author:</strong> ${resource.Author}</p>
+            <p><strong>Category:</strong> ${resource.Category}</p>`;
+        container.appendChild(div);
+    });
+}
+
+async function searchResources() {
+    const title = document.getElementById('searchTitle').value.toLowerCase();
+    const date = document.getElementById('searchDate').value;
+    const author = document.getElementById('searchAuthor').value.toLowerCase();
+    const category = document.getElementById('searchCategory').value.toLowerCase();
+
+    const resources = await loadResources();
+    const filteredResources = resources.filter(resource => {
+        return (!title || resource.Title.toLowerCase().includes(title)) &&
+               (!date || resource.Date === date) &&
+               (!author || resource.Author.toLowerCase().includes(author)) &&
+               (!category || resource.Category.toLowerCase().includes(category));
+    });
+
+    displayResources(filteredResources);
+}
+</script>
+
+</body>
+</html>
