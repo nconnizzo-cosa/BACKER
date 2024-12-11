@@ -9,51 +9,55 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>SERP Framework</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#search">Search</a></li>
-                    <li><a href="#workflows">Workflows</a></li>
-                    <li><a href="#reference">References</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>SERP Framework</h1></h1>
+        <p>The SERP Framework</p>
     </header>
 
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to the SERP Framework</h2>
-            <p> A project of the Council of State Archivists</p>
-        </div>
-    </section>
+    <div class="content-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">SERP Elements</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
 
-    <section id="search">
-        <div class="container">
-            <h2>Search</h2>
-            <input type="text" placeholder="Search...">
-        </div>
-    </section>
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <section id="home">
+                <h2>Welcome to the SERP Framework</h2>
+                <p>The State Electronic Records Preservation Framework, a high-level, enterprise-wide guide to preserving digital public records.</p>
+            </section>
 
-    <section id="workflows">
-        <div class="container">
-            <h2>Workflows</h2>
-            <p>Workflows for the entire digital preservation lifecycle</p>
-        </div>
-    </section>
+            <section id="search">
+                <h2>Search</h2>
+                <input type="text" id="search-input" placeholder="Search...">
+                <div id="search-results"></div>
+            </section>
 
-    <section id="reference">
-        <div class="container">
-            <h2>Reference</h2>
-            <p></p>
-        </div>
-    </section>
+            <section id="Workflows">
+                <h2>Workflows</h2>
+                <p>Here you can find workflows developed using SERP and used by state and territorial governments</p>
+            </section>
+
+            <section id="references">
+                <h2>References</h2>
+                <p></p>
+            </section>
+
+            <section id="about">
+                <h2>About</h2>
+                <p></p>
+            </section>
+        </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; Council of State Archivists, State Electronic Records Initiative, 2024</p>
-        </div>
+        <p>&copy; Council of State Archivists, State Electronic Records Initiative, 2024</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
