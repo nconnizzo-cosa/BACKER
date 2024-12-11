@@ -1,0 +1,30 @@
+Framework Elements
+Each of the core elements of the State Electronic Records Preservation framework represents a high-level group of related domain areas with unique challenges, but each element is interrelated with factors from the other. Because these elements are necessarily connected, the framework does not recognize high achievement in one area alone as being sufficient preservation. All elements must be addressed by the organization and the enterprise (the collaborative group of public agencies involved in these processes) to achieve high levels of maturity:
+
+Identifying Essential Records and Recordkeeping Requirements
+States must control their records to manage their records. Control requires a complete inventory of records and systems in which they reside.
+Preservation of essential records necessitates identifying what elements of records are essential. Digital records have form and structure beyond their content, including metadata and relationships to other records, that are essential to their understanding
+Legal requirements (including retention and disposition), technical requirements (format, applications, and workflows), administrative requirements (approval, custody, and control), and security requirements (protecting PII, PHI, intellectual property) are just some of the essential requirements for effective public records management.
+Requirements for managing records should be documented in standardized forms and must make these requirements broadly available and accessible to both the administrators and audiences of public records.
+
+Assigning Roles and Responsibilities for Managing Digital Records
+Records are managed by many custodians throughout their life cycles, from those who create and receive records directly, to those who manage systems in which records are stored, and those who author, implement, and audit governance. 
+Those who are closest to the creation and receipt of records are typically those with the most knowledge of their form and content.
+Failure to meet requirements at any point in the lifecycle can irreparably damage the authenticity, reliability, or integrity of records. Most digital preservation and governance tasks are best assigned to the records’ custodians.
+
+Governing Digital Systems and Services
+Digital records and data are stored within systems and manipulated by applications and services that create, modify, duplicate, reformat, and destroy them. Control and documentation of these systems is essential to adequately preserve records today, and contextualize them tomorrow. 
+How systems are configured matters as much as which systems are in place. Digital systems include more than software or hardware components; systems include the policies, procedures, and standards that define the pathways through which digital information flows.
+Public agencies rely heavily on external vendors to provide most of the systems that manage public records. Control of the information in these systems is paramount, and ensuring that these systems can comply with digital recordkeeping requirements is an ever-evolving problem.
+Coordination between various systems-related roles (developers, procurement, vendors, system administrators) and records producers is key to ensuring that all digital systems are properly governed.
+
+Migrating Essential Records and Data
+Government is made of many agencies with many employees, and is subject to near-constant turnover of laws, regulations, and leadership. Migration of data from one custodian, system, format, or structure to another must be a core component of any governance framework. 
+Identifying the significant properties of digital records, the value of data elements, and how to preserve them during migrations is key to the practice of digital preservation. It is possible to preserve too much information and do so inefficiently. 
+Public recordkeeping systems should be designed with interoperability, information transfer, and flexibility as core goals, in addition to information security and discoverability. Vendor-produced systems must allow for the non-destructure export of records to open, preservation-ready formats. 
+Most business systems are not designed to retain data for the extended time frames. Permanent records must be migrated to trustworthy repositories for permanent preservation. 
+
+Providing Access to Records
+Records must be available to the designated audience communities to have their value realized. If the public cannot access digital information in a timely fashion, then its value is degraded or effectively destroyed. 
+Archives, as permanent repositories of information, must constantly evaluate how the public seeks, interprets, and contextualizes records within.
+Public records frequently appear in legal contexts, where accuracy and completeness of chain of custody is paramount. Digital records should be accompanied with the details of their management and provenance in order to fully trust the information contained within. 
